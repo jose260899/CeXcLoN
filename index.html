@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeX</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <link rel="icon" type="image/jpg" href="https://cdn.lovesavingsgroup.com/logos/cex.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the generated CSS file -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+            
+
+        });
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar is-primary " role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Logo -->
+            <a class="navbar-item" href="index.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/CeX_Logo.webp" alt="Logo">
+                <p class="control ml-1 ">
+                    <strong>CeX</strong>
+                </p>
+            </a>
+
+            <!-- Hamburguesa para dispositivos móviles -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <!-- Menú principal -->
+        <div id="navbarBasicExample" class="navbar-menu mt-1">
+            <div class="navbar-start">
+                <!-- Buscador -->
+                <div class="navbar-item ">
+                    <div class="field has-addons">
+                        <p class="control" style="width: 200%;">
+                            <input class="input is-rounded is-fullwidth" type="text" placeholder="Buscar">
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="navbar-end">
+                <!-- Iniciar Sesión y Cesta como nivel -->
+                <div class="navbar-item">
+                    <div class="level">
+                        <!-- Iniciar Sesión -->
+                        <div class="level-item">
+                            <div class="buttons">
+                                <a class="button is-primary" href="#">Iniciar Sesión</a>
+                            </div>
+                        </div>
+                        <!-- Cesta -->
+                        <div class="level-item">
+                            <a class="button is-info" href="#">
+                                <span class="icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                                <span>Mi Cesta</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+
+    <div class="tabs is-centered has-background-primary is-hidden-mobile">
+        <ul>
+            <li class=""><a>Inicio</a></li>
+            <li><a>Juegos</a></li>
+            <li><a>Series</a></li>
+            <li><a>Móviles</a></li>
+            <li><a>Electrónica</a></li>
+        </ul>
+    </div>
+
+    <div class="notification  has-text-centered mt-0" id="notification">
+        <button class="delete" onclick="cerrarNotificacion()"></button>
+        <strong>¡Atención!</strong> Esta página está en construcción.
+    </div>
+
+    <script>
+        function cerrarNotificacion() {
+            // Agrega la clase 'is-hidden' para ocultar la notificación
+            document.getElementById('notification').classList.add('is-hidden');
+        }
+    </script>
+
+
+
+    <!-- Cards de Videojuegos -->
+    <section class="section">
+
+
+
+        <div class="columns is-multiline ">
+
+            <div class="column is-2 is-hidden-mobile ">
+                <!---menu-->
+                <aside class="menu is-narrow is-fullheight">
+                    <p class="menu-label">
+                        MENÚ
+                    </p>
+
+                    </ul>
+                    <p class="menu-label">
+                        ¿Quieres comprar?
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Música</a></li>
+                        <li><a>Cine</a></li>
+                        <li>
+                            <a>Gaming</a>
+                            <ul>
+                                <li><a class="is-active">Juegos</a></li>
+                                <li><a>Portátiles</a></li>
+                                <li><a>Sobremesa</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a>Informática</a></li>
+
+
+                    </ul>
+                    <p class="menu-label">
+                        ¿Quieres vender?
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Con efectivo o vale CEX</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <!-- Card 1 -->
+            <div class="column is-one-fifth">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_95614862?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">God of War</p>
+                        <p class="subtitle is-6">PS5</p>
+                        <div class="content has-text-right mr-3">
+                            46.99€
+                            <a class="button is-info ml-2" href="godOfWar.html">
+                                <span class="icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                                <span>Mi Cesta</span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_113006522?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">Call of Duty</p>
+                        <p class="subtitle is-6">PS5 </p>
+                        <div class="content has-text-right">
+                            69.99€
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_92783596?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">GTA V</p>
+                        <p class="subtitle is-6">PS5</p>
+                        <div class="content has-text-right">
+                            15.99€
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-one-fifth">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_95614862?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">God of War</p>
+                        <p class="subtitle is-6">PS5</p>
+                        <div class="content has-text-right">
+                            46.99€
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_113006522?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">Call of Duty</p>
+                        <p class="subtitle is-6">PS5 </p>
+                        <div class="content has-text-right">
+                            69.99€
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_92783596?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">GTA V</p>
+                        <p class="subtitle is-6">PS5</p>
+                        <div class="content has-text-right">
+                            15.99€
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="column is-one-fifth">
+                <div class="card">
+                    <!-- ... (contenido similar al Card 1) ... -->
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_117923323?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">FC 24</p>
+                        <p class="subtitle is-6">PS5</p>
+                        <div class="content has-text-right">
+                            51.99€
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_106030598?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">F1 23</p>
+                        <p class="subtitle is-6">PS5</p>
+                        <div class="content has-text-right ">
+                            39.99€
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_92783596?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">GTA V</p>
+                        <p class="subtitle is-6">PS5</p>
+                        <div class="content has-text-right">
+                            15.99€
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="column is-one-fifth">
+                <div class="card">
+                    <!-- ... (contenido similar al Card 1) ... -->
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_94732608?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">The Last Of Us</p>
+                        <p class="subtitle is-6">PS5</p>
+                        <div class="content has-text-right">
+                            47.99€
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_92783596?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">GTA V</p>
+                        <p class="subtitle is-6">PS5</p>
+                        <div class="content has-text-right">
+                            15.99€
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img class="mt-2"
+                                src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_92783596?x=960&y=720&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=960&ey=720&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=960&cdy=720"
+                                alt="Game 1">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">GTA V</p>
+                        <p class="subtitle is-6">PS5</p>
+                        <div class="content has-text-right">
+                            15.99€
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer  has-text-white">
+        <div class="container">
+            <div class="columns">
+                <!-- Sección de Contacto -->
+                <div class="column is-one-third">
+                    <h3 class="title is-4">Contacto</h3>
+                    <p>
+                        <strong>Dirección:</strong><br>
+                        Donde tu no llegas, tukinkifav
+                    </p>
+                    <p>
+                        <strong>Email:</strong><br>
+                        elonmusk@ausiasmarch.net
+                    </p>
+                </div>
+
+                <!-- Sección de Enlaces Rápidos -->
+                <div class="column is-one-third">
+                    <h3 class="title is-4">Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Juegos</a></li>
+                        <li><a href="#">Series</a></li>
+                        <li><a href="#">Móviles</a></li>
+                        <li><a href="#">Electrónica</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección de Redes Sociales -->
+                <div class="column is-one-third">
+                    <h3 class="title is-4">Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/groups/ElonMusk/?locale=es_ES" class="icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/elonmusk?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                            class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/__jose824__/" class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Derechos de Autor y Enlaces Legales -->
+        <div class="content has-text-centered mt-6">
+            <p>
+                <strong>CeX</strong> - Todos los derechos reservados &copy; 2023
+            </p>
+            <p>
+                <a href="https://www.boe.es/">Términos y condiciones</a> |
+                <a href="https://www.boe.es/">Política de privacidad</a>
+            </p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
